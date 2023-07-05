@@ -1,8 +1,8 @@
 {
-  "name": "goit-react-hw-01-components-2",
+  "name": "goit-react-hw-03-image-finder-2",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://savage-viktor/goit-react-hw-01-components-2",
+  "homepage": "https://savage-viktor/goit-react-hw-03-image-finder-2",
   "dependencies": {
     "@emotion/styled": "^11.10.0",
     "@testing-library/jest-dom": "^5.16.3",
