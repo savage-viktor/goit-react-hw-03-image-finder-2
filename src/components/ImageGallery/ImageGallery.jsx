@@ -2,10 +2,14 @@
 import styles from "./ImageGallery.module.css";
 import ImageGalleryItem from "../ImageGalleryItem/ImageGalleryItem";
 
-const ImageGallery = () => {
+const ImageGallery = ({ images, onClick }) => {
   return (
     <ul className={styles.imageGallery}>
-      <ImageGalleryItem />
+      {images.map((image) => {
+        return (
+          <ImageGalleryItem key={image.id} onClick={onClick} image={image} />
+        );
+      })}
     </ul>
   );
 };

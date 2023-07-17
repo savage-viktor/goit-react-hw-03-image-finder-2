@@ -7,8 +7,8 @@ class Searchbar extends Component {
     searchWord: "",
   };
 
-  handleInput = (event) => {
-    this.setState({ searchWord: event.target.value });
+  handleInput = ({ target: { value } }) => {
+    this.setState({ searchWord: value });
   };
 
   handleSubmit = (event) => {
@@ -16,7 +16,7 @@ class Searchbar extends Component {
 
     event.preventDefault();
     onSubmit(this.state.searchWord);
-    this.setState({ searchWord: "" });
+    // this.setState({ searchWord: "" });
   };
 
   render() {
