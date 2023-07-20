@@ -10,12 +10,12 @@ const modalRoot = document.querySelector("#modal");
 class Modal extends Component {
   componentDidMount() {
     window.addEventListener("keydown", this.listener);
-    modalRoot.addEventListener("click", this.listener);
+    window.addEventListener("click", this.listener);
   }
 
   componentWillUnmount() {
     window.removeEventListener("keydown", this.listener);
-    modalRoot.removeEventListener("click", this.listener);
+    window.removeEventListener("click", this.listener);
   }
 
   listener = (event) => {
