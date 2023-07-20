@@ -7,7 +7,14 @@ const ImageGallery = ({ images, onClick }) => {
     <ul className={styles.imageGallery}>
       {images.map((image) => {
         return (
-          <ImageGalleryItem key={image.id} onClick={onClick} image={image} />
+          <ImageGalleryItem
+            key={image.id}
+            src={image.webformatURL}
+            alt={image.tags}
+            onClick={() => {
+              onClick(image);
+            }}
+          />
         );
       })}
     </ul>

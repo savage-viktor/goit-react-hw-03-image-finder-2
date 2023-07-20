@@ -1,7 +1,11 @@
 // import PropTypes from "prop-types";
 import styles from "./Modal.module.css";
 
+import { createPortal } from "react-dom";
+
 import { Component } from "react";
+
+const modalRoot = document.querySelector("#modal");
 
 class Modal extends Component {
   componentDidMount() {
@@ -24,14 +28,26 @@ class Modal extends Component {
     // }
   };
 
+  // render() {
+  //   return createPortal(
+  //     <div className={css.overlay} onClick={this.props.toggleModal}>
+  //       <div className={css.modal}>
+  //         <img src={this.props.modalImage} alt={this.props.alt} width="700" />
+  //       </div>
+  //     </div>,
+  //     modalRoot
+  //   );
+  // }
+
   render() {
     const { image, description } = this.props;
-    return (
+    return createPortal(
       <div className={styles.overlay}>
         <div className={styles.modal}>
           <img src={image} alt={description} />
         </div>
-      </div>
+      </div>,
+      modalRoot
     );
   }
 }
