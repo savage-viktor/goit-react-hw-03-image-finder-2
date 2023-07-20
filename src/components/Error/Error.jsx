@@ -1,3 +1,5 @@
+// import PropTypes from "prop-types";
+
 import styles from "./Error.module.css";
 const Error = ({ errorMessage }) => {
   return (
@@ -7,5 +9,6 @@ const Error = ({ errorMessage }) => {
   );
 };
 
+// Error.propTypes = {};
+
 export default Error;
-// Whoops, something went wrong: {errorMessage}

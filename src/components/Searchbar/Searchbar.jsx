@@ -1,5 +1,5 @@
-import { Component } from "react";
 // import PropTypes from "prop-types";
+import { Component } from "react";
 import styles from "./Searchbar.module.css";
 
 class Searchbar extends Component {
@@ -13,10 +13,9 @@ class Searchbar extends Component {
 
   handleSubmit = (event) => {
     const { onSubmit } = this.props;
-
+    const { searchWord } = this.state;
     event.preventDefault();
-    onSubmit(this.state.searchWord);
-    // this.setState({ searchWord: "" });
+    onSubmit(searchWord);
   };
 
   render() {
