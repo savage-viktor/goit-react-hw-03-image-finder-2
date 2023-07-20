@@ -40,7 +40,7 @@ class App extends Component {
     this.setState({ imageName: searchWord });
   };
 
-  handleClick = (image) => {
+  handleOpenModal = (image) => {
     this.setState({ currentImage: image, modal: true });
   };
 
@@ -100,7 +100,7 @@ class App extends Component {
         {status === STATUS.REJECTED && <Error errorMessage={errorMessage} />}
 
         {status === STATUS.RESOLVED && (
-          <ImageGallery images={images} onClick={this.handleClick} />
+          <ImageGallery images={images} onClick={this.handleOpenModal} />
         )}
 
         {loadMoreVisible && <Button onClick={this.handleLoadMode} />}
