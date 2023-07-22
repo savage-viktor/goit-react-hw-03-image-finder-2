@@ -15,7 +15,11 @@ class Searchbar extends Component {
     const { onSubmit } = this.props;
     const { searchWord } = this.state;
     event.preventDefault();
-    onSubmit(searchWord);
+    if (searchWord.trim() === "") {
+      alert("Enter search word");
+      return;
+    }
+    onSubmit(searchWord.trim());
   };
 
   render() {

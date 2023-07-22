@@ -51,10 +51,6 @@ class App extends Component {
   async componentDidUpdate(_, prevState) {
     const { imageName, perPage, page } = this.state;
 
-    if (imageName === "") {
-      return;
-    }
-
     if (prevState.imageName !== imageName) {
       this.setState({ status: STATUS.PENDING });
 
